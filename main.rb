@@ -9,7 +9,7 @@ class Main
 		menu
 	end
 
-	def menu
+	def self.menu
 		puts 'MAIN MENU'.colorize(:cyan)
 		puts '1: Enter git command'.colorize(:cyan)
 		puts '2: Exit'.colorize(:cyan)
@@ -17,7 +17,7 @@ class Main
 		case choice
 		when 1
 			puts 'Enter git command'.colorize(:green)
-			Git.git_cmd(gets.strip)
+			Git.display_cmd(gets.strip)
 			menu
 		when 2
 			exit
